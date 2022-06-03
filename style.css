@@ -1,0 +1,115 @@
+.header {
+    padding: 60px;
+    text-align: center;
+    background: midnightblue;
+    color: white;
+    font-size: 30px;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+img{
+    height: 550px;
+    width: 550px;
+}
+
+.text{
+    color: midnightblue;
+    font-size: 20px;
+}
+
+.text2{
+    color: navy;
+    font-size: 35px;
+}
+
+.container{
+    position: relative;
+    height: 108px;
+    width: 192px;
+}
+
+.img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.image-grid {
+    --gap: 16px;
+    --num-cols: 4;
+    --row-height: 300px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+.image-grid > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-grid-col-2 {
+    grid-column: span 2;
+}
+
+.image-grid-row-2 {
+    grid-row: span 2;
+}
+
+/* Anything udner 1024px */
+@media screen and (max-width: 1024px) {
+    .image-grid {
+        --num-cols: 2;
+        --row-height: 200px;
+    }
+}
+
+body {margin: 0;}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: pink;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: cornflowerblue;}
+
+ul.topnav li a.active {background-color: midnightblue;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+    ul.topnav li.right,
+    ul.topnav li {float: none;}
+}
+
+.box{
+    width: 200px;
+    height: 25px;
+    border: 10px solid lightpink;
+    margin: 25px;
+    padding: 4px;
+}
+
